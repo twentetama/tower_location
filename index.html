@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bakti Communication Tower</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 400px;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        font-family: verdana;
+        text-align: left;
+      }
+    </style>
+    <script src="data/tower_loc.geojson"></script>
+    <script src="data/tower_buf.geojson"></script>
+  </head>
+  <body>
+    <h1> Communication Tower Locator </h1>
+
+    <div id="map"></div>
+    <p>Click the button for more information</p>
+    <div>
+      <button class="button-elem">Existing Location</button>
+      <button class="button-elem2">New Locations Candidate</button>
+      <button class="button-elem3">Buffer</button>
+    </div>
+
+    <script src="js/intiate.js"></script>
+
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7P5AKNjawMKEI5pirDbmY7Btl2xwmjf0&callback=initMap">
+    </script>
+
+  </body>
+</html>
