@@ -1,5 +1,6 @@
 var map;
-var markers = [];
+var newLoc;
+var newMarker;
 
 function initMap() {
   var indonesia = {lat: -2.5489, lng: 118.0149};
@@ -172,3 +173,29 @@ function initMap() {
     }
   });
 }
+function getLoc() {
+  var newLat = document.getElementById('lat').value;
+  var newLong = document.getElementById('lng').value;
+  var newLoc = new google.maps.LatLng(newLat, newLong);
+  console.log(newLoc);
+  addNewMarker(newLoc);
+  newMarker.setMap(map)
+};
+
+function addNewMarker (location){
+  newMarker = new google.maps.Marker({
+    position: location,
+    map: map,
+    clickable: true,
+  });
+
+  if(location){
+    var infoWindow = new google.maps.InfoWindow({
+      content: "new location"
+    });
+
+  newMarker.addListener('click', function(){
+      infoWindow.open(map,newMarker);
+    });
+  };
+};

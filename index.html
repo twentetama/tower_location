@@ -28,7 +28,6 @@
       }
     </style>
     <script src="data/tower_loc.geojson"></script>
-    <script src="data/tower_buf.geojson"></script>
   </head>
   <body>
     <h1> Communication Tower Locator </h1>
@@ -40,6 +39,15 @@
       <button class="button-elem2">New Locations Candidate</button>
       <button class="button-elem3">Buffer</button>
     </div>
+    <div>
+      <form>
+        Latitude:<br>
+        <input type="text" id="lat" value=""><br>
+        Longitude:<br>
+        <input type="text" id="lng" value=""><br><br>
+        <input type="button" value="Submit" onclick="getLoc()"/>
+        <input type="reset">
+      </form>
 
     <script src="js/intiate.js"></script>
 
